@@ -5,7 +5,7 @@ Summary:	Criteria abstract queries
 Summary(pl):	Criteria - abstrakcyjne zapytania
 Name:		ruby-Criteria
 Version:	1.1a
-Release:	1
+Release:	2
 License:	GPL
 Group:		Development/Languages
 Source0:	http://mephle.org/Criteria/criteria-%{version}.tar.gz
