@@ -1,6 +1,7 @@
 %define	ruby_archdir	%(ruby -r rbconfig -e 'print Config::CONFIG["archdir"]')
 %define ruby_rubylibdir %(ruby -r rbconfig -e 'print Config::CONFIG["rubylibdir"]')
 Summary:	Criteria abstract queries
+Summary(pl):	Criteria - abstrakcyjne zapytania
 Name:		ruby-Criteria
 Version:	1.1a
 Release:	1
@@ -16,10 +17,16 @@ BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-Criteria is a module for abstracting queries to various data sets.  For
-instance, you might have a flat text file, or an array of Ruby objects, or a
-SQL database, and wish to perform the same query on any given source, without
-different versions of code for each.
+Criteria is a module for abstracting queries to various data sets. For
+instance, you might have a flat text file, or an array of Ruby
+objects, or a SQL database, and wish to perform the same query on any
+given source, without different versions of code for each.
+
+%description -l pl
+Criteria to modu³ do abstrakcyjnych zapytañ na ró¿nych typach danych.
+Na przyk³ad, mo¿na mieæ p³aski plik tekstowy lub tablicê obiektów w
+Rubym, albo bazê SQL, i chcieæ wykonaæ to samo zapytanie na dowolnym
+¼ródle, bez tworzenia ró¿nych wersji kodu dla ka¿dego z nich.
 
 %prep
 %setup -q -n criteria-%{version}
@@ -35,7 +42,8 @@ rdoc -o rdoc/ --main README.en lib
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{ruby_rubylibdir}
 
-ruby install.rb install --prefix=$RPM_BUILD_ROOT
+ruby install.rb install \
+	--prefix=$RPM_BUILD_ROOT
 
 %clean
 rm -rf $RPM_BUILD_ROOT
