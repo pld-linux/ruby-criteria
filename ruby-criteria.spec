@@ -1,5 +1,6 @@
 %define	ruby_archdir	%(ruby -r rbconfig -e 'print Config::CONFIG["archdir"]')
 %define ruby_rubylibdir %(ruby -r rbconfig -e 'print Config::CONFIG["rubylibdir"]')
+%define	ruby_ridir	%(ruby -r rbconfig -e 'include Config; print File.join(CONFIG["datadir"], "ri", CONFIG["ruby_version"], "system")')
 Summary:	Criteria abstract queries
 Summary(pl):	Criteria - abstrakcyjne zapytania
 Name:		ruby-Criteria
@@ -36,14 +37,17 @@ ruby install.rb config \
 	--rb-dir=%{ruby_rubylibdir} \
 	--so-dir=%{ruby_archdir}
 
-rdoc -o rdoc/ --main README.en lib
+rdoc -o rdoc --main README.en lib
+rdoc --ri -o ri lib
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{ruby_rubylibdir}
+install -d $RPM_BUILD_ROOT{%{ruby_rubylibdir},%{ruby_ridir}}
 
 ruby install.rb install \
 	--prefix=$RPM_BUILD_ROOT
+
+cp -a ri/ri/* $RPM_BUILD_ROOT%{ruby_ridir}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -53,3 +57,4 @@ rm -rf $RPM_BUILD_ROOT
 %doc rdoc/*
 %{ruby_rubylibdir}/criteria
 %{ruby_rubylibdir}/criteria.rb
+%{ruby_ridir}/*
