@@ -1,6 +1,3 @@
-%define	ruby_archdir	%(ruby -r rbconfig -e 'print Config::CONFIG["archdir"]')
-%define ruby_rubylibdir %(ruby -r rbconfig -e 'print Config::CONFIG["rubylibdir"]')
-%define	ruby_ridir	%(ruby -r rbconfig -e 'include Config; print File.join(CONFIG["datadir"], "ri", CONFIG["ruby_version"], "system")')
 Summary:	Criteria abstract queries
 Summary(pl):	Criteria - abstrakcyjne zapytania
 Name:		ruby-Criteria
@@ -11,6 +8,7 @@ Group:		Development/Languages
 Source0:	http://mephle.org/Criteria/criteria-%{version}.tar.gz
 # Source0-md5:	a39482fdf7bae7639791444dfb4d91ce
 URL:		http://www.mephle.org/Criteria/
+BuildRequires:	rpmbuild(macros) >= 1.263
 BuildRequires:	ruby
 BuildRequires:	ruby-devel
 Requires:	ruby
