@@ -8,9 +8,9 @@ Group:		Development/Languages
 Source0:	http://mephle.org/Criteria/criteria-%{version}.tar.gz
 # Source0-md5:	a39482fdf7bae7639791444dfb4d91ce
 URL:		http://www.mephle.org/Criteria/
-BuildRequires:	rpmbuild(macros) >= 1.263
+BuildRequires:	rpmbuild(macros) >= 1.277
 BuildRequires:	ruby-devel
-Requires:	ruby-modules
+%ruby_mod_ver_requires_eq
 #BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
