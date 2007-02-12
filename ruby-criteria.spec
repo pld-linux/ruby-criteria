@@ -1,5 +1,5 @@
 Summary:	Criteria abstract queries
-Summary(pl.UTF-8):   Criteria - abstrakcyjne zapytania
+Summary(pl.UTF-8):	Criteria - abstrakcyjne zapytania
 Name:		ruby-Criteria
 Version:	1.1a
 Release:	3
