@@ -1,5 +1,5 @@
 Summary:	Criteria abstract queries
-Summary(pl):	Criteria - abstrakcyjne zapytania
+Summary(pl.UTF-8):   Criteria - abstrakcyjne zapytania
 Name:		ruby-Criteria
 Version:	1.1a
 Release:	3
@@ -20,11 +20,11 @@ instance, you might have a flat text file, or an array of Ruby
 objects, or a SQL database, and wish to perform the same query on any
 given source, without different versions of code for each.
 
-%description -l pl
-Criteria to modu³ do abstrakcyjnych zapytañ na ró¿nych typach danych.
-Na przyk³ad, mo¿na mieæ p³aski plik tekstowy lub tablicê obiektów w
-Rubym, albo bazê SQL, i chcieæ wykonaæ to samo zapytanie na dowolnym
-¼ródle, bez tworzenia ró¿nych wersji kodu dla ka¿dego z nich.
+%description -l pl.UTF-8
+Criteria to moduÅ‚ do abstrakcyjnych zapytaÅ„ na rÃ³Å¼nych typach danych.
+Na przykÅ‚ad, moÅ¼na mieÄ‡ pÅ‚aski plik tekstowy lub tablicÄ™ obiektÃ³w w
+Rubym, albo bazÄ™ SQL, i chcieÄ‡ wykonaÄ‡ to samo zapytanie na dowolnym
+ÅºrÃ³dle, bez tworzenia rÃ³Å¼nych wersji kodu dla kaÅ¼dego z nich.
 
 %prep
 %setup -q -n criteria-%{version}
