@@ -1,16 +1,18 @@
+%define pkgname criteria
 Summary:	Criteria abstract queries
 Summary(pl.UTF-8):	Criteria - abstrakcyjne zapytania
-Name:		ruby-Criteria
+Name:		ruby-%{pkgname}
 Version:	1.1a
 Release:	3
 License:	GPL
 Group:		Development/Languages
-Source0:	http://mephle.org/Criteria/criteria-%{version}.tar.gz
+Source0:	http://mephle.org/Criteria/%{pkgname}-%{version}.tar.gz
 # Source0-md5:	a39482fdf7bae7639791444dfb4d91ce
 URL:		http://www.mephle.org/Criteria/
 BuildRequires:	rpmbuild(macros) >= 1.277
 BuildRequires:	ruby-devel
 %{?ruby_mod_ver_requires_eq}
+Obsoletes:	ruby-Criteria
 #BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
